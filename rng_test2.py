@@ -36,11 +36,9 @@ def turn_10r():
     result.append(pickup_r_2(weight2))
     return result
 
-gacha_result_10 = []
-gacha_result_10_list = []
+gacha_result = []
+gacha_result_list = []
 for i in range(10):
-    gacha_result_10.append(turn_10r())
-    gacha_result_10_list += gacha_result_10[i]
+    gacha_result.append(turn_10r())
+    gacha_result_list += gacha_result[i]
 
-for item in gacha_result_10_list:
-    print(item)
