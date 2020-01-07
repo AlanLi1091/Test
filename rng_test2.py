@@ -42,7 +42,5 @@ for i in range(10):
     gacha_result_10.append(turn_10r())
     gacha_result_10_list += gacha_result_10[i]
 
-r_num = gacha_result_10_list.count('Rcard{}'.format(random.randint(1, 99)))
-print(r_num)
-sr_num = gacha_result_10_list.count('SR')
-ssr_num = gacha_result_10_list.count('SSR')
+for item in gacha_result_10_list:
+    print(item)
