@@ -7,3 +7,24 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 df = pd.read_csv("Sanitary_Sewer_2_Modified.csv")
+
+
+x = df['Date and Time']
+y = df["Weir Flow(L/s)"]
+ax = plt.subplot()
+plt.plot(x, y)
+plt.xlabel("Date and Time")
+plt.ylabel("Weir Flow(L/s)")
+plt.title("Weir Flow Graph")
+ax.set_xticks(["2019-12-30 00:00:00", "2019-12-31 00:00:00", "2020-01-01 00:00:00", "2020-01-02 00:00:00", "2020-01-03 00:00:00", "2020-01-04 00:00:00", "2020-01-05 00:00:00", "2020-01-06 00:00:00"])
+plt.show()
+
+x = df['Date and Time']
+y = df["Weir Level(cm)"]
+ax = plt.subplot()
+plt.plot(x, y, color='red')
+plt.xlabel("Date and Time")
+plt.ylabel("Weir Level(cm)")
+plt.title("Weir Level Graph")
+ax.set_xticks(["2019-12-30 00:00:00", "2019-12-31 00:00:00", "2020-01-01 00:00:00", "2020-01-02 00:00:00", "2020-01-03 00:00:00", "2020-01-04 00:00:00", "2020-01-05 00:00:00", "2020-01-06 00:00:00"])
+plt.show()
