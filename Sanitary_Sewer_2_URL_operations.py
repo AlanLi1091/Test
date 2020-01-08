@@ -54,16 +54,16 @@ df = pd.read_csv("Sanitary_Sewer_2_Modified.csv")
 #plt.ylabel("Weir Level(cm)")
 #plt.show()
 
-ax = plt.subplot
-plt.hist(df["Weir Flow(L/s)"], bins=40)
-plt.title("Recorded Weir Flow Distributions")
-plt.xlabel("Recorded Weir Flow(L/s)")
-plt.ylabel("Number of Recordings")
-plt.show()
+#ax = plt.subplot
+#plt.hist(df["Weir Flow(L/s)"], bins=40)
+#plt.title("Recorded Weir Flow Distributions")
+#plt.xlabel("Recorded Weir Flow(L/s)")
+#plt.ylabel("Number of Recordings")
+#plt.show()
 
-ax = plt.subplot
-plt.hist(df["Weir Level(cm)"], bins=20, color="red")
-plt.title("Recorded Weir Level Distributions")
-plt.xlabel("Recorded Weir Level(L/s)")
-plt.ylabel("Number of Recordings")
-plt.show()
+#ax = plt.subplot
+#plt.hist(df["Weir Level(cm)"], bins=20, color="red")
+#plt.title("Recorded Weir Level Distributions")
+#plt.xlabel("Recorded Weir Level(L/s)")
+#plt.ylabel("Number of Recordings")
+#plt.show()
