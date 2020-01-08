@@ -39,3 +39,17 @@ plt.title("Weir Level vs Weir Flow Graph")
 ax.set_xticks(range(0, 41, 2))
 ax.set_yticks(range(0, 19, 2))
 plt.show()
+
+ax = plt.subplot
+plt.bar(range(len(df["Date and Time"])), df["Weir Flow(L/s)"])
+plt.title("Weir Flow Bar Graph")
+plt.xlabel("Index")
+plt.ylabel("Weir Flow(L/s)")
+plt.show()
+
+ax = plt.subplot
+plt.bar(range(len(df["Date and Time"])), df["Weir Level(cm)"], color="red")
+plt.title("Weir Level Bar Graph")
+plt.xlabel("Index")
+plt.ylabel("Weir Level(cm)")
+plt.show()
