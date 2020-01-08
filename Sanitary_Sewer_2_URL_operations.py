@@ -28,3 +28,14 @@ plt.ylabel("Weir Level(cm)")
 plt.title("Weir Level Graph")
 ax.set_xticks(["2019-12-30 00:00:00", "2019-12-31 00:00:00", "2020-01-01 00:00:00", "2020-01-02 00:00:00", "2020-01-03 00:00:00", "2020-01-04 00:00:00", "2020-01-05 00:00:00", "2020-01-06 00:00:00"])
 plt.show()
+
+x = df["Weir Flow(L/s)"]
+y = df["Weir Level(cm)"]
+ax = plt.subplot()
+plt.scatter(x, y, c="green", alpha=0.6)
+plt.xlabel("Weir Flow(L/s)")
+plt.ylabel("Weir Level(cm)")
+plt.title("Weir Level vs Weir Flow Graph")
+ax.set_xticks(range(0, 41, 2))
+ax.set_yticks(range(0, 19, 2))
+plt.show()
