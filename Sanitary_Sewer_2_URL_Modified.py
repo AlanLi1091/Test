@@ -22,22 +22,16 @@ for datapoints in ss2_wf_datapoints:
 for datapoints in ss2_wl_datapoints:
     wl_values.append(datapoints["value"])
 
-date = []
-time = []
-for i in range(len(timestamps)):
-    date.append(timestamps[i].split("T")[0])
-    time.append(timestamps[i].split("T")[-1])
-
-hrs_mins = []
-for i in range(len(time)):
-    hrs_mins.append(time[i][:-3])
-
 df = pd.DataFrame({
-    'Date': date,
-    'Time': hrs_mins,
+    'Timestamps': timestamps,
     'Weir Flow(L/s)': wf_values,
     'Weir Level(cm)': wl_values,
 })
 
-export_csv = df.to_csv(r'C:\Users\allan\Desktop\githubtest\Test\Sanitary_Sewer_2.csv', index = None, header = True)
-print(df)
+df["Date and Time"] = df.Timestamps.apply(lambda x: x.replace('T', ' '))
+
+new_df = df[['Date and Time', 'Weir Flow(L/s)', 'Weir Level(cm)']]
+
+print(new_df)
+export_csv = new_df.to_csv(r'C:\Users\allan\Desktop\githubtest\Test\Sanitary_Sewer_2_Modified.csv', index = None, header = True)
+
